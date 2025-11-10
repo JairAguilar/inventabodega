@@ -1,0 +1,12 @@
+<h2>Inventario por Bodega</h2>
+<table border="1">
+<tr><th>Bodega</th><th>Producto</th><th>Cantidad</th></tr>
+{% for i in inventario %}
+<tr>
+    <td>{{ i.bodega.nombre }}</td>
+    <td>{{ i.producto.nombre }}</td>
+    <td>{{ i.cantidad }}</td>
+</tr>
+{% endfor %}
+</table>
+<a href="/">Volver</a>

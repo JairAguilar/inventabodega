@@ -1,0 +1,11 @@
+<h2>Lista de Bodegas</h2>
+<table border="1">
+<tr><th>Nombre</th><th>Dirección</th></tr>
+{% for b in bodegas %}
+<tr>
+    <td>{{ b.nombre }}</td>
+    <td>{{ b.direccion }}</td>
+</tr>
+{% endfor %}
+</table>
+<a href="/">Volver</a>

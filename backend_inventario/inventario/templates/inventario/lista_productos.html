@@ -1,0 +1,12 @@
+<h2>Lista de Productos</h2>
+<table border="1">
+<tr><th>Nombre</th><th>Código</th><th>Precio</th></tr>
+{% for p in productos %}
+<tr>
+    <td>{{ p.nombre }}</td>
+    <td>{{ p.codigo }}</td>
+    <td>${{ p.precio }}</td>
+</tr>
+{% endfor %}
+</table>
+<a href="/">Volver</a>

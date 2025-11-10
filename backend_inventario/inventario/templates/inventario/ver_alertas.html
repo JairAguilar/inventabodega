@@ -1,0 +1,17 @@
+<h2>⚠️ Alertas de Stock</h2>
+{% if alertas %}
+<table border="1">
+<tr><th>Fecha</th><th>Producto</th><th>Bodega</th><th>Tipo</th></tr>
+{% for a in alertas %}
+<tr>
+    <td>{{ a.fecha }}</td>
+    <td>{{ a.producto.nombre }}</td>
+    <td>{{ a.bodega.nombre }}</td>
+    <td>{{ a.tipo }}</td>
+</tr>
+{% endfor %}
+</table>
+{% else %}
+<p>No hay alertas activas.</p>
+{% endif %}
+<a href="/">Volver</a>

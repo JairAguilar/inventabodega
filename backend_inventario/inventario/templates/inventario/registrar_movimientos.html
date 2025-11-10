@@ -1,0 +1,31 @@
+<h2>Registrar Movimiento</h2>
+<form method="POST">
+    {% csrf_token %}
+    <label>Producto:</label>
+    <select name="producto">
+        {% for p in productos %}
+        <option value="{{ p.id }}">{{ p.nombre }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label>Bodega Origen:</label>
+    <select name="origen">
+        {% for b in bodegas %}
+        <option value="{{ b.id }}">{{ b.nombre }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label>Bodega Destino:</label>
+    <select name="destino">
+        {% for b in bodegas %}
+        <option value="{{ b.id }}">{{ b.nombre }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label>Cantidad:</label>
+    <input type="number" name="cantidad" min="1" required><br><br>
+
+    <button type="submit">Registrar</button>
+</form>
+<a href="/">Volver</a>
+<!-- arreglar esta mmada xdd para el front pal ultimo asi no paso rabia-->
