@@ -46,7 +46,4 @@ class AlertaViewSet(viewsets.ModelViewSet):
     serializer_class = AlertaSerializer
 
 
-# (Opcional) Vista para probar el movimiento entre bodegas por API en el futuro
-# class MovimientoViewSet(viewsets.ModelViewSet):
-#     queryset = Movimiento.objects.all()
-#     serializer_class = MovimientoSerializer
+
